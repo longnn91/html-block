@@ -22,6 +22,7 @@ select {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
       position: relative;
       margin-top: 50px;
+      background-color: $white_color;
 
       .time {
         padding: 5px;
@@ -36,14 +37,6 @@ select {
         text-align: center;
         z-index: 99;
 
-        &__left {
-          left: 20px;
-        }
-
-        &__right {
-          left: calc(100% - 80px);
-        }
-
         &__month {
           font-size: 1rem;
           text-transform: uppercase;
@@ -56,15 +49,13 @@ select {
     }
 
     &__picture {
-      height: 260px;
-      width: auto;
       overflow: hidden;
       position: relative;
       background-color: $white_color;
+      height: 360px;
 
       img {
-        width: 100%;
-        height: auto;
+        height: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -97,15 +88,7 @@ select {
     justify-content: center;
     padding: 20px 0;
 
-    &--left {
-      align-items: flex-start;
-    }
-
-    &--right {
-      align-items: flex-end;
-    }
-
-    &__sub-title {
+    .sub-title {
       text-transform: capitalize;
       color: $sub_text_color;
       font-size: 1.2rem;
@@ -113,24 +96,16 @@ select {
       padding: 5px 0;
     }
 
-    &__title {
+    .title {
       font-weight: 600;
       font-size: 1.6rem;
       margin: 0 20px;
       padding: 5px 0;
     }
 
-    &__text {
+    .text {
       margin: 0 20px;
       padding: 5px 0;
-
-      &--left {
-        text-align: left;
-      }
-
-      &--right {
-        text-align: right;
-      }
     }
   }
 }
