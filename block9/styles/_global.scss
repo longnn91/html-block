@@ -1,0 +1,110 @@
+body,
+input,
+button,
+select {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.wrapper {
+  max-width: $max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.block {
+  background-color: $block_background_color;
+  padding: 30px;
+
+  &__item {
+    background-color: $block_background_color;
+
+    &__container {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
+      background-color: $white_color;
+    }
+
+    &__picture {
+      overflow: hidden;
+      position: relative;
+      background-color: $white_color;
+
+      img {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        filter: grayscale(100%) blur(0.5px);
+
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+      }
+
+      img:hover {
+        filter: grayscale(0) blur(0);
+        transform: translate(-50%, -50%) scale(1.5);
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
+        -moz-transform: translate(-50%, -50%) scale(1.5);
+        -o-transform: translate(-50%, -50%) scale(1.5);
+        -ms-transform: translate(-50%, -50%) scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: $white_color;
+    justify-content: center;
+    padding: 20px 30px !important;
+
+    &__title {
+      font-weight: 600;
+      font-size: 1.6rem;
+      padding: 10px 0;
+    }
+
+    &__text {
+      padding-top: 5px;
+      padding-bottom: 30px;
+      text-align: justify;
+    }
+  }
+
+  .footer {
+
+    &__button {
+      margin-bottom: 20px;
+
+      button {
+        background-color: #ecccd2;
+        padding: 10px 20px;
+        border: solid 2px #d1b5b9;
+        width: 150px;
+      }
+    }
+
+    &__author {
+
+      &__content {
+        text-transform: capitalize;
+
+        span {
+          font-style: italic;
+        }
+
+        span:nth-child(1) {
+          font-weight: bold;
+          font-style: normal;
+        }
+
+      }
+    }
+  }
+}

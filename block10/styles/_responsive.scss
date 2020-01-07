@@ -1,0 +1,48 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+@media (max-width: 767.98px) {
+    .block {
+        &__item {
+            &__picture {
+                height: auto;
+                min-height: 200px;
+
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.block {
+    &__item {
+        &__container:nth-child(odd) {
+            .time {
+                left: 20px;
+            }
+        }
+
+        &__container:nth-child(even) {
+            flex-direction: row-reverse;
+
+            .time {
+                left: calc(100% - 80px);
+            }
+        }
+    }
+
+    &__content:nth-child(odd) {
+        align-items: flex-start;
+    }
+
+    &__content:nth-child(even) {
+        align-items: flex-end;
+
+        .text {
+            text-align: right;
+        }
+    }
+}
