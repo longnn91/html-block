@@ -141,7 +141,10 @@
     cursor: pointer;
 }
 
-body, input, button, select {
+body,
+input,
+button,
+select {
     font-family: 'Roboto Condensed', sans-serif !important;
 }
 
@@ -190,35 +193,19 @@ body, input, button, select {
     font-size: 1.6rem;
 }
 
-.block__item__picture {
+.block__item__header {
     overflow: hidden;
     position: relative;
     background-color: #fff;
     height: 360px;
 }
 
-.block__item__picture img {
+.block__item__header img {
     height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
-    filter: grayscale(100%) blur(0.5px);
-    transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -ms-transition-duration: 0.5s;
-}
-
-.block__item__picture img:hover {
-    filter: grayscale(0) blur(0);
-    transform: translate(-50%, -50%) scale(1.5);
-    -webkit-transform: translate(-50%, -50%) scale(1.5);
-    -moz-transform: translate(-50%, -50%) scale(1.5);
-    -o-transform: translate(-50%, -50%) scale(1.5);
-    -ms-transform: translate(-50%, -50%) scale(1.5);
-    cursor: pointer;
 }
 
 .block__content {
@@ -250,36 +237,20 @@ body, input, button, select {
 }
 
 @media (max-width: 767.98px) {
-    .block__item__picture {
+    .block__item__header {
         height: auto;
         min-height: 200px;
     }
-    .block__item__picture img {
-        height: auto;
-        width: 100%;
-    }
 }
 
-.block__item__container:nth-child(odd) .time {
+.block__item:nth-child(odd) .block__item__container .time {
     left: 20px;
 }
 
-.block__item__container:nth-child(even) {
+.block__item:nth-child(even) .block__item__container {
     flex-direction: row-reverse;
 }
 
-.block__item__container:nth-child(even) .time {
+.block__item:nth-child(even) .block__item__container .time {
     left: calc(100% - 80px);
-}
-
-.block__content:nth-child(odd) {
-    align-items: flex-start;
-}
-
-.block__content:nth-child(even) {
-    align-items: flex-end;
-}
-
-.block__content:nth-child(even) .text {
-    text-align: right;
 }

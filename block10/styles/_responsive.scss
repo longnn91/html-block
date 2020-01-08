@@ -23,17 +23,11 @@
 
     &__item:nth-child(even) {
         .block__item__container {
+            flex-direction: row-reverse;
+
             .time {
                 left: calc(100% - 80px);
             }
         }
-    }
-
-    &__content:nth-child(odd) {
-        align-items: flex-start;
-    }
-
-    &__content:nth-child(even) {
-        align-items: flex-end;
     }
 }

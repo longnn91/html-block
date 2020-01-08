@@ -191,6 +191,7 @@ $max-width: 960px;
 }
 
 
+
 // @import 'global';
 body,
 input,
@@ -242,7 +243,7 @@ select {
             }
         }
 
-        &__picture {
+        &__header {
             overflow: hidden;
             position: relative;
             background-color: $white_color;
@@ -254,23 +255,6 @@ select {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%) scale(1);
-                filter: grayscale(100%) blur(0.5px);
-
-                transition-duration: 0.5s;
-                -webkit-transition-duration: 0.5s;
-                -moz-transition-duration: 0.5s;
-                -o-transition-duration: 0.5s;
-                -ms-transition-duration: 0.5s;
-            }
-
-            img:hover {
-                filter: grayscale(0) blur(0);
-                transform: translate(-50%, -50%) scale(1.5);
-                -webkit-transform: translate(-50%, -50%) scale(1.5);
-                -moz-transform: translate(-50%, -50%) scale(1.5);
-                -o-transform: translate(-50%, -50%) scale(1.5);
-                -ms-transform: translate(-50%, -50%) scale(1.5);
-                cursor: pointer;
             }
         }
     }
@@ -314,45 +298,30 @@ select {
 @media (max-width: 767.98px) {
     .block {
         &__item {
-            &__picture {
+            &__header {
                 height: auto;
                 min-height: 200px;
-
-                img {
-                    height: auto;
-                    width: 100%;
-                }
             }
         }
     }
 }
 
 .block {
-    &__item {
-        &__container:nth-child(odd) {
+    &__item:nth-child(odd) {
+        .block__item__container {
             .time {
                 left: 20px;
             }
         }
+    }
 
-        &__container:nth-child(even) {
+    &__item:nth-child(even) {
+        .block__item__container {
             flex-direction: row-reverse;
 
             .time {
                 left: calc(100% - 80px);
             }
-        }
-    }
-
-    &__content:nth-child(odd) {
-        align-items: flex-start;
-    }
-
-    &__content:nth-child(even) {
-        align-items: flex-end;
-
-        .text {
-            text-align: right;
         }
     }
 }

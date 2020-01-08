@@ -36,24 +36,7 @@ select {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) scale(1);
-        filter: grayscale(50%) blur(0.1px);
-
-        transition-duration: 0.5s;
-        -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
-        -o-transition-duration: 0.5s;
-        -ms-transition-duration: 0.5s;
-      }
-
-      img:hover {
-        filter: grayscale(0) blur(0);
-        transform: translate(-50%, -50%) scale(1.5);
-        -webkit-transform: translate(-50%, -50%) scale(1.5);
-        -moz-transform: translate(-50%, -50%) scale(1.5);
-        -o-transform: translate(-50%, -50%) scale(1.5);
-        -ms-transform: translate(-50%, -50%) scale(1.5);
-        cursor: pointer;
+        transform: translate(-50%, -50%);
       }
     }
   }
