@@ -4,30 +4,25 @@
 @media (max-width: 767.98px) {
     .block {
         &__item {
-            &__picture {
+            &__header {
                 height: auto;
                 min-height: 200px;
-
-                img {
-                    height: auto;
-                    width: 100%;
-                }
             }
         }
     }
 }
 
 .block {
-    &__item {
-        &__container:nth-child(odd) {
+    &__item:nth-child(odd) {
+        .block__item__container {
             .time {
                 left: 20px;
             }
         }
+    }
 
-        &__container:nth-child(even) {
-            flex-direction: row-reverse;
-
+    &__item:nth-child(even) {
+        .block__item__container {
             .time {
                 left: calc(100% - 80px);
             }
@@ -40,9 +35,5 @@
 
     &__content:nth-child(even) {
         align-items: flex-end;
-
-        .text {
-            text-align: right;
-        }
     }
 }

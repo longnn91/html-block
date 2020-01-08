@@ -22,13 +22,13 @@ select {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
       position: relative;
       background-color: $white_color;
+      margin-bottom: 30px;
     }
 
-    &__picture {
+    &__header {
       overflow: hidden;
       position: relative;
       background-color: $white_color;
-      // height: 400px;
 
       img {
         width: auto;
@@ -37,23 +37,6 @@ select {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%) scale(1);
-        filter: grayscale(100%) blur(0.5px);
-
-        transition-duration: 0.5s;
-        -webkit-transition-duration: 0.5s;
-        -moz-transition-duration: 0.5s;
-        -o-transition-duration: 0.5s;
-        -ms-transition-duration: 0.5s;
-      }
-
-      img:hover {
-        filter: grayscale(0) blur(0);
-        transform: translate(-50%, -50%) scale(1.5);
-        -webkit-transform: translate(-50%, -50%) scale(1.5);
-        -moz-transform: translate(-50%, -50%) scale(1.5);
-        -o-transform: translate(-50%, -50%) scale(1.5);
-        -ms-transform: translate(-50%, -50%) scale(1.5);
-        cursor: pointer;
       }
     }
   }

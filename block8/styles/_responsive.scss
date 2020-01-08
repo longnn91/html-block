@@ -2,7 +2,7 @@
 @media (max-width: 767.98px) {
     .block {
         &__item {
-            &__picture {
+            &__header {
                 min-height: 300px;
 
                 img {
@@ -17,7 +17,7 @@
 @media (max-width: 575.98px) {
     .block {
         &__item {
-            &__picture {
+            &__header {
                 min-height: 200px;
             }
         }
