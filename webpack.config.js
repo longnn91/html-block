@@ -5,18 +5,18 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './block11/index.html',
+  template: './block1/index.html',
   filename: 'index.html',
   inject: 'body'
 });
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
-  { from: './block11/img', to: 'img' },
+  { from: './block1/img', to: 'img' },
 ]);
 
 module.exports = {
-  entry: './block11/index.js',
+  entry: './block1/index.js',
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
