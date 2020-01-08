@@ -30,6 +30,7 @@ select {
     }
 
     &__container {
+      position: relative;
       padding: 0 10px;
       border-radius: 2px;
       overflow: hidden;

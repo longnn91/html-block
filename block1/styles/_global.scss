@@ -20,6 +20,7 @@ select {
 
     &__container {
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
     }
 
     &__header {
