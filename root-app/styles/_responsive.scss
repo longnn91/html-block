@@ -1,0 +1,16 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .header {
+    &__block {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      &__logo {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

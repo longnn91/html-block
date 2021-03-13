@@ -1,0 +1,116 @@
+body,
+input,
+button,
+select {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.wrapper {
+  max-width: $max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.block {
+  background-color: $block_background_color;
+  padding: 30px 0px;
+
+  &__item {
+    background-color: $block_background_color;
+
+    &__container {
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+      position: relative;
+    }
+
+    &__header {
+      height: 160px;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        filter: grayscale(50%) blur(0.1px);
+        transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -ms-transition-duration: 0.5s;
+      }
+
+      img:hover {
+        filter: grayscale(0) blur(0);
+        transform: translate(-50%, -50%) scale(1.5);
+        -webkit-transform: translate(-50%, -50%) scale(1.5);
+        -moz-transform: translate(-50%, -50%) scale(1.5);
+        -o-transform: translate(-50%, -50%) scale(1.5);
+        -ms-transform: translate(-50%, -50%) scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-color: $white_color;
+
+    &__avatar {
+      padding: 5px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid $white_color;
+      position: absolute;
+      left: calc(50% - 40px);
+      top: -40px;
+
+      img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__text {
+      padding: 20px 15px;
+      padding-top: 60px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  &__footer {
+    height: 34px;
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 2px solid $white_color;
+      font-size: 0.8rem;
+      color: $icon_color;
+
+      &:first-child {
+        padding-left: 30px;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 30px;
+      }
+
+      img {
+        width: 12px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
