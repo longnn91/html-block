@@ -168,17 +168,22 @@ body {
     flex: 30%;
     &__tab {
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-      background-image: linear-gradient(to right, #fc8900, #fe05f4);
-      padding: 10px 5px;
+      // align-items: center;
+      // justify-content: space-around;
+      // background-image: linear-gradient(to right, #fc8900, #fe05f4);
+      // padding: 10px 5px;
       border-radius: 30px;
+      overflow: hidden;
       color: white;
       &:last-child {
         margin-top: 10px;
       }
       &-link {
         cursor: pointer;
+        flex-basis: 50%;
+        text-align: center;
+      background-image: linear-gradient(to right, #fc8900, #fe05f4);
+        padding: 10px 5px;
       }
     }
     &__item {
@@ -252,7 +257,10 @@ body {
   border-radius: 10px;
 }
 .activeTab {
-  background-color: gray;
+  background-color: white !important;
+  background-image: none;
+  color: black;
+  border: 1px solid linear-gradient(to right, #fc8900, #fe05f4) !important;
 }
 .footer {
   position: relative;
